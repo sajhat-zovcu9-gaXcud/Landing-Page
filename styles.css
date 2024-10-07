@@ -1,0 +1,1217 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #F9F8FE;
+    color: #0E2A34;
+}
+
+@font-face {
+    font-family: 'Quicksand-Bold';
+    src: url(Fonts/Quicksand-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Quicksand-SemiBold';
+    src: url(Fonts/Quicksand-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Quicksand-Medium';
+    src: url(Fonts/Quicksand-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src: url(Fonts/Quicksand-Regular.ttf);
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Quicksand-SemiBold';
+    color: #0E2A34;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-family: 'Quicksand-SemiBold';
+    color: #0E2A34;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-family: 'Quicksand-SemiBold';
+    color: #0E2A34;
+}
+
+p {
+    font-size: 1.5rem;
+    font-family: 'Quicksand-Regular';
+    color: #0E2A34;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+header {
+    display: grid;
+    grid-template-rows: 1fr 1fr 8fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-background {
+    background-color: #3FC0F0;
+    grid-row: 1 / 2;
+    grid-column: 1;
+    height: 100%;
+
+    position: fixed; /* Fix the menu at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 11%;
+    z-index: 1; /* Ensure the menu stays on top */
+}
+
+.fixed-logo{
+    position: fixed; /* Fix the menu at the top */
+    top: 0;
+    width: 100%;
+    height: 11%;
+    z-index: 2; /* Ensure the menu stays on top */
+}
+
+.menu{
+    list-style: none;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+
+    font-size: 1.5rem;
+    font-family: 'Quicksand-Medium';
+    color: #F9F8FE;
+
+}
+
+.menu-style-text{
+    text-decoration: none;
+    color: #F9F8FE;
+
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+.menu-style-text::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    left: 0;
+    background: #F9F8FE;
+    transition: width 0.3s ease, right 0.3s ease;
+}
+
+
+.menu-style-text:hover::after {
+    width: 100%;
+    right: 0;
+}
+
+.edurino-logo {
+    width: 250px;
+    height: auto;
+    grid-row: 1 / 3;
+    grid-column: 1;
+    justify-self: center;
+
+    margin-top: 2rem;
+}
+
+
+.Start-Page-Image {
+    background-image: url('Images/Start-Page-Image.png');
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    width: 100vw;
+
+    grid-row: 2 / 4;
+    grid-column: 1;
+
+    z-index: -1;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.Start-Page-Image h1 {
+    color: #F9F8FE;
+    margin-top: 15vh;
+}
+
+.Start-Page-Image p {
+    color: #F9F8FE;
+    margin-top: 15vh;
+}
+
+@media (max-width: 900px) {
+
+    header {
+        display: grid;
+        grid-template-rows: 1fr 1fr 11fr;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu{
+        list-style: none;
+    
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    
+        height: 100%;
+    
+        font-size: 1.2rem;
+        font-family: 'Quicksand-Medium';
+        color: #F9F8FE;
+    
+    }
+
+    .edurino-logo {
+        width: 220px;
+        height: auto;
+        grid-row: 1 / 3;
+        grid-column: 1;
+        justify-self: center;
+    
+        margin-top: 2rem;
+    }
+
+    .Start-Page-Image {
+        background-image: url('Images/Start-Page-Image-Tablet-2.png');
+        background-size: cover;
+        background-position: center;
+        height: 125vh;
+        width: 100vw;
+
+        grid-row: 2 / 4;
+        grid-column: 1;
+
+        z-index: -1;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .Start-Page-Image h1 {
+        font-size: 2.5rem;
+        font-family: 'Quicksand-SemiBold';
+    }
+
+    .Start-Page-Image p {
+        color: #F9F8FE;
+        margin-top: 15vh;
+        font-size: 1.2rem;
+    }
+}
+
+.meet-your-new-freinds {
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.paws-and-headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    text-align: right;
+}
+
+.paws-and-headline h1 {
+    color: #3FC0F0;
+}
+
+.character-intro-left {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 2fr;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.image-container-2{
+    position: relative;
+    height: 400px;
+}
+
+.character-intro-right {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.1fr 1fr 1fr;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.Figurine {
+    width: 413px;
+    height: 396px;
+
+    margin-left: -1rem;
+
+    position: absolute;
+    top: 0;
+
+    opacity: 1;
+
+    transition: opacity 0.2s ease-out;
+
+}
+
+.game-image{
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    position: absolute;
+    top: 0;
+
+    opacity: 0;
+
+    transition: opacity 0.01s ease-out;
+}
+
+.image-container-2:hover .Figurine{
+    opacity: 0;
+}
+
+.image-container-2:hover .game-image{
+    opacity: 1;
+}
+
+.figurine-and-paw-45-right {
+    text-align: right;
+}
+
+.Figurine-right {
+    width: 413px;
+    height: 396px;
+    margin-right: -2rem;
+
+
+    opacity: 1;
+
+    transition: opacity 0.2s ease-out;
+
+}
+
+.image-container-2:hover .Figurine-right{
+    opacity: 0;
+}
+
+button {
+    width: 358px;
+    height: 80px;
+
+    margin-top: 2rem;
+
+    background-color: #FD9100;
+
+    border-radius: 10px;
+    border-style: none;
+
+    font-size: 25px;
+    font-family: 'Quicksand-Medium';
+    color: #F9F8FE;
+
+}
+  
+button:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+.image-number {
+    display: flex;
+    justify-content: right;
+    margin-right: 2rem;
+}
+
+.Number {
+    height: 150px;
+    width: auto;
+}
+
+.character-description p {
+    margin-top: 1rem;
+}
+
+.Paw-45 {
+    height: 400px;
+    width: auto;
+    margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+    .meet-your-new-freinds h1 {
+        font-size: 2.5rem;
+        font-family: 'Quicksand-SemiBold';
+    }
+
+    .meet-your-new-freinds h2 {
+        font-size: 1.9rem;
+        font-family: 'Quicksand-SemiBold';
+    }
+
+    .meet-your-new-freinds p {
+        font-size: 1.2rem;
+        font-family: 'Quicksand-Regular';
+    }
+
+    .meet-your-new-freinds {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .image-container-2{
+        position: relative;
+        height: 280px;
+    }
+
+    .game-image{
+        width: 250px;
+        height: auto;
+        
+    }
+
+
+    .paws-for-friends-sections {
+        width: 400px;
+        height: auto;
+    }
+
+    .Figurine {
+        width: 300px;
+        height: 283px;
+
+        margin-left: -1rem;
+    }
+
+    .Figurine-right {
+        width: 300px;
+        height: 283px;
+
+        margin-right: -1.5rem;
+    }
+
+    .buy-now-button {
+        width: 265px;
+        height: 70px;
+
+        margin-top: 2rem;
+
+        background-color: #FD9100;
+
+        border-radius: 10px;
+        border-style: none;
+
+        font-size: 20px;
+        font-family: 'Quicksand-Medium';
+        color: #F9F8FE;
+    }
+
+
+    .Paw-45 {
+        height: 300px;
+        width: auto;
+        margin-top: 2rem;
+    }
+}
+
+.Wave {
+    width: 100vw;
+    height: auto;
+    margin-bottom: -1rem;
+}
+
+.begin-your-journey {
+    padding-left: 8rem;
+    padding-right: 8rem;
+
+    background-color: #3FC0F0;
+}
+
+.Headline-Mika-Robin-Wave {
+    display: flex;
+    justify-content: space-between;
+}
+
+.purple-text {
+    color: #8C52FF;
+}
+
+.Mika-and-Robin-Wave {
+    margin-top: -20rem;
+    width: auto;
+    height: 400px;
+}
+
+.begin-your-journey h1 {
+    color: #F9F8FE;
+}
+
+.steps-section {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    margin-top: 6rem;
+}
+
+.steps-section a{
+    color: #F9F8FE;
+}
+
+.steps-section a:hover{
+    color: #8C52FF;
+}
+
+.image-container{
+    position: relative;
+    height: 20vw;
+}
+
+.step-image {
+    width: 20vw;
+    height: auto;
+
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    position: absolute;
+    top: 0;
+
+    opacity: 1;
+
+    transition: opacity 0.2s ease-out;
+
+}
+
+.show-image{
+    width: 20vw;
+    height: auto;
+    border-radius: 20px;
+
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    position: absolute;
+    top: 0;
+
+    opacity: 0;
+
+    transition: opacity 0.01s ease-out;
+
+    
+
+}
+
+.image-container:hover .step-image{
+    opacity: 0;
+}
+
+.image-container:hover .show-image{
+    opacity: 1;
+}
+
+
+.begin-your-journey h3 {
+    color: #F9F8FE;
+    text-align: center;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.headline-play {
+    font-size: 2.4rem;
+}
+
+.headline-and-background-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('Images/Rocket-and-Planet.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 330px;
+
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.video-container h2{
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #F9F8FE;
+}
+
+.edurino-video {
+    width: 90%;
+    height: auto;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.Wave-Inverted {
+    width: 100vw;
+    height: auto;
+    margin-bottom: -1rem;
+}
+
+
+@media (max-width: 900px) {
+
+    .begin-your-journey h1 {
+        font-size: 2.5rem;
+        font-family: 'Quicksand-SemiBold';
+        color: #F9F8FE;
+    }
+
+    .begin-your-journey h3 {
+        font-size: 1.5rem;
+        font-family: 'Quicksand-SemiBold';
+    }
+
+    .begin-your-journey {
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        background-color: #3FC0F0;
+    }
+
+
+    .Mika-and-Robin-Wave {
+        margin-top: -10rem;
+        width: auto;
+        height: 250px;
+    }
+
+}
+
+.headline-for-parents-area{
+    text-align: center;
+    font-size: 4.5rem;
+    color: #3FC0F0;
+    margin-top: 5rem;
+    
+}
+
+.Learning-Trough-Captivating-Stories {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 10rem;
+    margin-top: 5rem;
+
+    background-image: url('Images/hat.png');
+    background-size: 500px auto;
+    background-position: top right;
+    background-repeat: no-repeat;
+
+
+}
+
+.description-button h1 {
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.description-button p {
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+
+.product-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-self: start;
+}
+
+.photo {
+    width: 20vw;
+    height: auto;
+    padding: 0.5rem;
+    border-radius: 20px;
+}
+
+.Learning-Trough-Captivating-Stories button {
+    margin-left: 5rem;
+}
+
+@media (max-width: 900px) {
+
+    .headline-for-parents-area{
+        text-align: center;
+        font-size: 3.5rem;
+        color: #3FC0F0;
+        margin-top: 5rem;
+        
+    }
+
+    .Learning-Trough-Captivating-Stories h1 {
+        font-size: 2.5rem;
+        font-family: 'Quicksand-SemiBold';
+    }
+
+    .Learning-Trough-Captivating-Stories p {
+        font-size: 1.2rem;
+        font-family: 'Quicksand-Regular';
+    }
+
+    .Learning-Trough-Captivating-Stories {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-top: 10rem;
+        margin-top: 5rem;
+
+        background-image: url('Images/hat.png');
+        background-size: 400px auto;
+        background-position: top right;
+        background-repeat: no-repeat;
+
+    }
+
+    .product-photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .photo {
+        width: 30vw;
+        height: auto;
+        padding: 0.5rem;
+        border-radius: 20px;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .right {
+        justify-self: end;
+    }
+
+    .left {
+        justify-self: start;
+    }
+
+    .description-button h1 {
+        margin-top: 2rem;
+    }
+
+    button {
+        width: 265px;
+        height: 70px;
+
+        margin-top: 2rem;
+
+        background-color: #FD9100;
+
+        border-radius: 10px;
+        border-style: none;
+
+        font-size: 20px;
+        font-family: 'Quicksand-Medium';
+        color: #F9F8FE;
+    }
+
+
+}
+
+.Kids-Wellbeing-is-Our-Top-Priority {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 5rem;
+    margin-top: 5rem;
+
+    background-image: url('Images/protect.png');
+    background-size: 350px auto;
+    background-position: right top;
+    background-repeat: no-repeat;
+
+
+}
+
+.kid-mother-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-self: start;
+}
+
+.descrition-list {
+    margin-left: 5rem;
+}
+
+.descrition-list p {
+    margin-top: 2rem;
+}
+
+.descrition-list li {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+
+
+    font-size: 1.5rem;
+    font-family: 'Quicksand-Medium';
+    color: #0E2A34;
+
+    margin-top: 2rem;
+
+}
+
+.icons {
+    width: 3rem;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+
+    .Kids-Wellbeing-is-Our-Top-Priority h1 {
+        font-size: 2.5rem;
+        font-family: 'Quicksand-SemiBold';
+    }
+
+    .Kids-Wellbeing-is-Our-Top-Priority p {
+        font-size: 1.2rem;
+        font-family: 'Quicksand-Regular';
+    }
+
+    .Kids-Wellbeing-is-Our-Top-Priority {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-top: 10rem;
+        margin-top: 5rem;
+
+        background-image: url('Images/protect.png');
+        background-size: 300px auto;
+        background-position: top right;
+        background-repeat: no-repeat;
+
+    }
+
+    
+
+    .kid-mother-photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    .descrition-list h1 {
+        margin-top: 2rem;
+    }
+
+    button {
+        width: 265px;
+        height: 70px;
+
+        margin-top: 2rem;
+
+        background-color: #FD9100;
+
+        border-radius: 10px;
+        border-style: none;
+
+        font-size: 20px;
+        font-family: 'Quicksand-Medium';
+        color: #F9F8FE;
+    }
+
+    .descrition-list li {
+        display: grid;
+        grid-template-columns: 1fr 15fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+        list-style: none;
+
+
+        font-size: 1.5rem;
+        font-family: 'Quicksand-Medium';
+        color: #0E2A34;
+
+        margin-top: 2rem;
+
+    }
+
+    .Kids-Wellbeing-is-Our-Top-Priority ul {
+        font-size: 1.2rem;
+        font-family: 'Quicksand-Regular';
+    }
+
+    .icons {
+        width: 2rem;
+        height: auto;
+    }
+
+
+}
+
+.reviews {
+    margin-top: 5rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+.reviews h2{
+    color: #F9F8FE;
+    font-family: 'Quicksand-SemiBold';
+}
+
+.reviews p{
+    color: #F9F8FE;
+    font-family: 'Quicksand-SemiBold';
+}
+
+.yes {
+    color: #FD9100;
+    font-family: 'Quicksand-Bold';
+
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    margin-top: 2rem;
+
+
+}
+
+.blue-review {
+    background-color: #3FC0F0;
+    border-radius: 10px;
+    gap: 3rem;
+    column-gap: 1rem;
+    padding: 3rem;
+
+}
+
+.avatar-and-text{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 4fr;
+    margin-bottom: 1rem;
+}
+
+.John{
+    grid-row: span 0.5;
+}
+
+.name-age-description{
+    margin-left: 1rem;
+    padding-top: 1rem;
+}
+
+.name-age-description h2{
+    margin-bottom: 1rem;
+}
+
+.avatar{
+    height: 150px;
+    width: auto;
+}
+
+.headline-arrow{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.arrow{
+   height: 60px;
+   width: auto;
+   align-self: center;
+   margin-left: 5rem;
+}
+
+.reviews button {
+    width: 100%;
+    height: 100%;
+
+    background-color: #FD9100;
+
+    border-radius: 10px;
+    border-style: none;
+
+    font-size: 1.5rem;
+    font-family: 'Quicksand-Medium';
+    color: #F9F8FE;
+    padding: 3rem;
+    margin-top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+
+}
+
+.reviews button h2{
+    margin-bottom: 1rem;
+}
+
+.reviews button:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+button:hover .arrow {
+    transform: translateX(5rem); /* Move the arrow to the right on hover */
+    transition: 0.3s ease;
+    
+}
+
+@media (max-width: 900px){
+    .reviews {
+        margin-top: 5rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .reviews h1 {
+        font-size: 2.5rem;
+        font-family: 'Quicksand-SemiBold';
+    }
+
+    .review-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 1.5rem;
+        margin-top: 2rem;
+    
+    
+    }
+
+    
+}
+
+.end-page-image{
+    background-image: url('Images/end-page-doodle-image.png');
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    margin-top: 5rem;
+
+}
+
+.end-page-image h1 {
+    color: #F9F8FE;
+    align-self: center;
+    margin-top: 11rem;
+}
+
+.end-page-image button{
+    margin: 0;
+    align-self: center;
+    width: 700px;
+}
+
+.end-page-image p {
+    color: #F9F8FE;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+    .end-page-image h1 {
+        font-size: 2.5rem;
+        font-family: 'Quicksand-SemiBold';
+    }
+    
+    .end-page-image{
+        background-image: url('Images/end-image-doodles-tablet.png');
+        background-size: cover;
+        background-position: center;
+        height: 125vh;
+        width: 100vw;
+    
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    
+        margin-top: 5rem;
+    
+    }
+
+    .end-page-image button{
+        margin: 0;
+        align-self: center;
+        width: 400px;
+    }
+
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    padding-left: 8rem;
+    padding-right: 8rem;
+
+    background-color: #3FC0F0;
+
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+footer p{
+    color: #F9F8FE;
+}
+
+footer input{
+    border-style: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 58px;
+    margin: 0;
+    padding: 0rem 1rem 0rem 1rem;
+    font-family: 'Quicksand-Regular';
+    font-size: 1rem;
+    
+}
+
+footer button{
+    margin-top: 0;
+    width: 120px;
+    height: 60px;
+    margin-left: -1rem;
+}
+
+.input-and-button{
+    display: flex;
+    margin-top: 1rem;
+}
+
+footer li{
+    list-style: none;
+    color: #F9F8FE;
+    font-family: 'Quicksand-Regular';
+    font-size: 1.3rem;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.apps-logo{
+    width: 200px;
+    height: auto;
+
+    margin-top: 1rem;
+}
+
+@media (max-width: 900px){
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    
+        padding-left: 4rem;
+        padding-right: 4rem;
+    
+        background-color: #3FC0F0;
+
+        padding-bottom: 5rem;
+    
+    }
+
+    .footer-content-2{
+        display: flex;
+        justify-self: right;
+        flex-direction: column;
+
+    }
+
+    footer li{
+        list-style: none;
+        color: #F9F8FE;
+        font-family: 'Quicksand-Regular';
+        font-size: 1.3rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    
+    }
+
+   
+}
